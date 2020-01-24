@@ -5,9 +5,7 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from datetime import datetime
 
-import logging
-from datetime import datetime
-import sqlite3, csv
+import csv
 
 
 class QueryDispatcher(object):
@@ -22,9 +20,9 @@ class QueryDispatcher(object):
         return self.__yahooFinance
 
     def _initDB(self):
-        engine = create_engine('sqlite:///test.db')
-        Base.metadata.create_all(engine)  # issues DDL to create tables
-        return sessionmaker(bind=engine)()
+        self.engine = create_engine('sqlite:///test.db')
+        Base.metadata.create_all(self.engine)  # issues DDL to create tables
+        return sessionmaker(bind=self.engine)()
     
 
     def get_or_create_ticker(self, ticker):
@@ -40,7 +38,7 @@ class QueryDispatcher(object):
 
         fs = self._yahooFinance.get_history(ticker,start_date,end_date)
         for row in csv.DictReader(fs):
-            print(row)
+            #print(row)
             _quote = Quote( ticker_id = _ticker.id,
                             date  = datetime.strptime( row['Date'], "%Y-%m-%d"),
                             open  = self._parse_check( row['Open']),

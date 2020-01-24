@@ -1,0 +1,103 @@
+Processed AGRO
+Processed ALUA
+Error on ticker ALUAC
+HTTP Error 404: Not Found
+Error on ticker ALUAD
+HTTP Error 404: Not Found
+Processed AUSO
+Processed BBAR
+Error on ticker BBARD
+HTTP Error 404: Not Found
+Processed BHIP
+Processed BMA
+Error on ticker BMA.D
+HTTP Error 404: Not Found
+Processed BOLT
+Processed BPAT
+Processed BRIO
+Processed BRIO6
+Processed BYMA
+Processed CADO
+Processed CAPX
+Processed CARC
+Processed CECO2
+Processed CELU
+Processed CEPU
+Error on ticker CEPUD
+HTTP Error 404: Not Found
+Processed CGPA2
+Processed COME
+Processed CRES
+Processed CTIO
+Processed CVH
+Processed DGCU2
+Processed DOME
+Processed DYCA
+Processed EDN
+Processed EMDE
+Processed ESME
+Processed FERR
+Processed FIPL
+Processed GAMI
+Processed GARO
+Processed GBAN
+Processed GCLA
+Error on ticker GCLAC
+HTTP Error 404: Not Found
+Processed GGAL
+Error on ticker GGALC
+HTTP Error 404: Not Found
+Error on ticker GGALD
+HTTP Error 404: Not Found
+Processed GRIM
+Processed HARG
+Processed HAVA
+Processed INTR
+Processed INVJ
+Processed IRCP
+Processed IRSA
+Processed LEDE
+Processed LOMA
+Processed LONG
+Processed METR
+Processed MIRG
+Processed MOLA
+Processed MOLI
+Processed MORI
+Processed OEST
+Processed PAMP
+Error on ticker PAMPC
+HTTP Error 404: Not Found
+Error on ticker PAMPD
+HTTP Error 404: Not Found
+Processed PATA
+Processed PATY
+Processed PGR
+Processed POLL
+Error on ticker RICH
+HTTP Error 404: Not Found
+Processed RIGO
+Processed ROSE
+Processed SAMI
+Error on ticker SAMID
+HTTP Error 404: Not Found
+Processed SEMI
+Processed SUPV
+Error on ticker SUPVD
+HTTP Error 404: Not Found
+Processed TECO2
+Processed TGLT
+Error on ticker TGLT2
+HTTP Error 404: Not Found
+Processed TGNO4
+Processed TGSU2
+Error on ticker TGSUD
+HTTP Error 404: Not Found
+Processed TRAN
+Processed TXAR
+Error on ticker TXARD
+HTTP Error 404: Not Found
+Processed VALO
+Processed YPFD
+Error on ticker YPFDD
+HTTP Error 404: Not Found
