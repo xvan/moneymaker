@@ -29,12 +29,35 @@ sql_DF = pd.read_sql_table(Quote.__tablename__, con=qd.engine)
 sql_DF.set_index(Quote.date.name, inplace=True)
  
  
-adj_close_df =sql_DF.groupby(Quote.ticker_id.name)[Quote.adj_close.name]
+GGAL_BA=sql_DF[sql_DF[Quote.ticker_id.name]=='GGAL.BA'][Quote.adj_close.name]
+GGAL=sql_DF[sql_DF[Quote.ticker_id.name]=='GGAL'][Quote.adj_close.name]
 
 ADR_RATIO=10.0
+GGAL_CCL=(GGAL_BA * ADR_RATIO / GGAL)
+#plot(GGAL_CCL.iplot(asFigure=True))
 
 
-GGAL_CCL=(adj_close_df.get_group('GGAL.BA') * ADR_RATIO / adj_close_df.get_group('GGAL'))
-plot(GGAL_CCL.iplot(asFigure=True))
+#TODO FIXME:
+PANEL_DF=sql_DF[sql_DF[Quote.ticker_id.name].str[-3:] == '.BA']
+
+
+normalized=PANEL_DF.groupby(Quote.ticker_id.name)[Quote.adj_close.name].apply(lambda x: x/GGAL_CCL)
+
+data=[]
+for k,v in normalized.groupby(Quote.ticker_id.name):
+   data += v.iplot(asFigure=True).data
+ 
+print(data)
+figure=go.Figure(data=data)
+iplot(figure)
+
+#plot(normalized.i plot(asFigure=True))
+#df.groupby('ticker')['adj_close'].plot(legend=True)
+
+#PANEL_DF['adj_closed_usd']=PANEL_DF[Quote.adj_close.name]/ GGAL_CCL
+
+#normalized= PANEL_DF.groupby(Quote.ticker_id.name)[Quote.adj_close.name] 
+
+
 
 
